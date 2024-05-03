@@ -1,5 +1,51 @@
 ### Options
 OPTIONS http://localhost:3000
 
-### Healthcheck
+### Get Healthcheck
 GET http://localhost:3000/healthcheck
+
+
+### Post Healthcheck
+POST http://localhost:3000/healthcheck
+Content-Type: application/json
+
+{
+    "name":"test",
+    "email":"test@test.com"
+}
+
+
+### Create Book
+POST http://localhost:3000/books/create
+Content-Type: application/json
+
+{
+    "title":"Test T",
+    "author":"Test A"
+}
+
+### Get All Books
+GET http://localhost:3000/books/get/all
+
+### Get Book by id
+GET http://localhost:3000/books/get/6634d7474d3f80f1d32fc810
+
+### Query Books 
+POST http://localhost:3000/books/query
+Content-Type: application/json
+
+{
+    "title":"Test T"
+}
+
+### Update Book
+PATCH  http://localhost:3000/books/update/6634d7474d3f80f1d32fc810
+Content-Type: application/json
+
+{
+    "title":"Test T - upd",
+    "author":"Test A - upd"
+}
+
+### Delete Book
+DELETE   http://localhost:3000/books/delete/6634d7474d3f80f1d32fc810
